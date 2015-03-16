@@ -12,3 +12,16 @@
 
 <%= link_to 'Edit', edit_post_path(@post) %> |
 <%= link_to 'Back', posts_path %>
+
+<%- welcome_index_path %>
+<%= form_for @comment, url:post_comments_path(@post) do |f| %>
+<%= f.text_field :text_area %>
+<%= f.submit %>
+<% end %>
+
+<%= @post.comments.each do |comment| %>
+<%= print comment.post_id %>
+<%- puts "Hello, World" %>
+<%- print comment.text_area %>
+<%- print "\n" %>
+<% end %>
