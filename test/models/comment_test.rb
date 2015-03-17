@@ -8,7 +8,7 @@ class CommentTest < ActiveSupport::TestCase
 
   	@comment = Comment.new text_area: "Content", post_id: 1
 
-  	assert @comment.save
+  	assert @comment.save,  "test_should_succeed_with_valid_post_id"
 
   end
 
