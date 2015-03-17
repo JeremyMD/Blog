@@ -15,13 +15,12 @@
 
 <%- welcome_index_path %>
 <%= form_for @comment, url:post_comments_path(@post) do |f| %>
-<%= f.text_field :text_area %>
+<%= f.text_area :text_area %>
 <%= f.submit %>
 <% end %>
 
-<%= @post.comments.each do |comment| %>
-<%= print comment.post_id %>
-<%- puts "Hello, World" %>
-<%- print comment.text_area %>
-<%- print "\n" %>
+<%- @post.comments.each do |comment| %>
+	<div>
+		<%= comment.text_area %>
+	</div>
 <% end %>

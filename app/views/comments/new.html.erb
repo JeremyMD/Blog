@@ -4,8 +4,4 @@
 
 <%= link_to 'Back', comments_path %>
 
-<%- welcome_index_path %>
-<%= form_for @comment, url:post_comments_path(@post) do |f| %>
-<%= f.text_area :text_area %>
-<%= f.submit %>
-<% end %>
+
