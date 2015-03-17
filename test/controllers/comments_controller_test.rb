@@ -5,17 +5,20 @@ class CommentsControllerTest < ActionController::TestCase
     @comment = comments(:one)
   end
 
+  # this test failed
   test "should get index" do
     get :index
     assert_response :success
     assert_not_nil assigns(:comments)
   end
 
+  # this test failed
   test "should get new" do
     get :new
     assert_response :success
   end
 
+  # this test failed
   test "should create comment" do
     assert_difference('Comment.count') do
       post :create, comment: { text_area: @comment.text_area, user_id: @comment.user_id }
@@ -24,21 +27,25 @@ class CommentsControllerTest < ActionController::TestCase
     assert_redirected_to comment_path(assigns(:comment))
   end
 
+  # this test failed
   test "should show comment" do
     get :show, id: @comment
     assert_response :success
   end
 
+  # this test failed
   test "should get edit" do
     get :edit, id: @comment
     assert_response :success
   end
 
+    # this test failed
   test "should update comment" do
     patch :update, id: @comment, comment: { text_area: @comment.text_area, user_id: @comment.user_id }
     assert_redirected_to comment_path(assigns(:comment))
   end
 
+  # this test failed
   test "should destroy comment" do
     assert_difference('Comment.count', -1) do
       delete :destroy, id: @comment
